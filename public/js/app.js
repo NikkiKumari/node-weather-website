@@ -12,7 +12,7 @@ const fetchWeather = (location)=>{
                 messageOne.textContent = data.error
             }else{
                 const currently = data.forecastData.currently;
-                messageOne.textContent = location;
+                messageOne.textContent = data.location;
                 messageTwo.textContent = `${currently.summary}, Temperature will be ${currently.temperature}F. There is ${currently.precipProbability}% chance of rain.`
             }
 
